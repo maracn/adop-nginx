@@ -5,7 +5,7 @@ cp -R /resources/configuration/* /etc/nginx/
 cp -R /resources/release_note/* /usr/share/nginx/html/
 
 #If SSL is enabled and the certs don't already exist, we'll geerate them.
-if [ "$SSL_ENABLED" == "TRUE" ] && [ -a /etc/nginx/ssl/adop-nginx.crt ]; then 
+if [ "$SSL_ENABLED" == "TRUE" ] && [ ! -a /etc/nginx/ssl/adop-nginx.crt ]; then 
   openssl req -nodes -newkey rsa:2048 -keyout /etc/nginx/ssl/adop-nginx.crt -out /etc/nginx/ssl/adop-nginx.key -subj "/C=IE/ST=Co. Dublin/L=Dublin/O=Accenture" ;
 fi
 
