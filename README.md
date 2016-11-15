@@ -33,7 +33,7 @@ Runtime configuration can be provided using environment variables:
 * LDAP_GROUP_ATTRIBUTE, LDAP object field attribute the defines group appartenence. 
 * LDAP_USER_ID_ATTRIBUTE, LDAP object field attribute the defines the user identifier. 
 * LDAP_USER_OBJECT_CLASS, LDAP user object class
-* SSL_ENABLED, set to "TRUE" if you would like SSL enabled (note: self-signed certs will be generated if no certs are found).
+* SSL_ENABLED, set to "TRUE" if you would like SSL enabled (note: self-signed certs will be generated if no certs are found, if you would like to use your own certs place the certs and keys in the location /etc/nginx/ssl/adop-nginx.[crt/key] and no new certs with be generated)
 
 # License
 Please view [licence information](LICENCE.md) for the software contained on this image.
