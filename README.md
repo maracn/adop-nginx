@@ -4,7 +4,7 @@
 
 # What is adop-nginx?
 
-adop-nginx provides Nginx with LDAP support. Nginx is a high performance reverse proxy. This image also has the LDAP authentiction module installed.
+adop-nginx provides Nginx with LDAP support. Nginx is a high performance reverse proxy. This image also has the LDAP authentication module installed.
 
 > [wikipedia.org/wiki/Nginx](https://en.wikipedia.org/wiki/Nginx)
 
@@ -33,6 +33,7 @@ Runtime configuration can be provided using environment variables:
 * LDAP_GROUP_ATTRIBUTE, LDAP object field attribute the defines group appartenence. 
 * LDAP_USER_ID_ATTRIBUTE, LDAP object field attribute the defines the user identifier. 
 * LDAP_USER_OBJECT_CLASS, LDAP user object class
+* SSL_ENABLED, set to "TRUE" if you would like SSL enabled (note: self-signed certs will be generated if no certs are found).
 
 # License
 Please view [licence information](LICENCE.md) for the software contained on this image.
