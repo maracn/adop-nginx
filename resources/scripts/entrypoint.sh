@@ -4,13 +4,13 @@ set -e
 cp -R /resources/configuration/* /etc/nginx/
 cp -R /resources/release_note/* /usr/share/nginx/html/
 
-#If SSL is enabled and the certs don't already exist, we'll geerate them.
-#We will also disable the old HTTP config, forcing all traffic over HTTPS
+#If SSL is enabled and the cert doesn't already exist, we'll generate one.
+#We will also disable the old HTTP config, forcing all traffic over HTTPS.
 
 if [ "$SSL_ENABLED" == "TRUE" ] ; then 
     mv /etc/nginx/sites-enabled/tools-context.conf /etc/nginx/sites-enabled/tools-context.off ;
     if [ ! -a /etc/nginx/ssl/adop-nginx.crt ]; then 
-      openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/nginx/ssl/adop-nginx.key -out /etc/nginx/ssl/adop-nginx.crt -subj "/C=IE/ST=Co. Dublin/L=Dublin/O=Accenture" ;
+      openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -keyout /etc/nginx/ssl/adop-nginx.key -out /etc/nginx/ssl/adop-nginx.crt -subj "/C=IE/ST=Co. Dublin/L=Dublin/O=Accenture" ;
     fi
 fi
 
