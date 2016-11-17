@@ -10,7 +10,7 @@ cp -R /resources/release_note/* /usr/share/nginx/html/
 if [ "$SSL_ENABLED" == "TRUE" ] ; then 
     mv /etc/nginx/sites-enabled/tools-context.conf /etc/nginx/sites-enabled/tools-context.off ;
     if [ ! -a /etc/nginx/ssl/adop-nginx.crt ]; then 
-      openssl req -nodes -newkey rsa:2048 -keyout /etc/nginx/ssl/adop-nginx.crt -out /etc/nginx/ssl/adop-nginx.key -subj "/C=IE/ST=Co. Dublin/L=Dublin/O=Accenture" ;
+      openssl req -nodes -newkey rsa:2048 -keyout /etc/nginx/ssl/adop-nginx.key -out /etc/nginx/ssl/adop-nginx.crt -subj "/C=IE/ST=Co. Dublin/L=Dublin/O=Accenture" ;
     fi
 fi
 
