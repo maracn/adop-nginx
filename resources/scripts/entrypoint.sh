@@ -7,6 +7,9 @@ cp -R /resources/release_note/* /usr/share/nginx/html/
 #If SSL is enabled and the cert doesn't already exist, we'll generate one.
 #We will also disable the old HTTP config, forcing all traffic over HTTPS.
 
+#Removing case sensitivity
+shopt -s nocasematch
+
 if [ "$SSL_ENABLED" == "TRUE" ] ; then 
     mv /etc/nginx/sites-enabled/tools-context.conf /etc/nginx/sites-enabled/tools-context.off ;
     if [ ! -a /etc/nginx/ssl/adop-nginx.crt ]; then 
