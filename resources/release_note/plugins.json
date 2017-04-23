@@ -11,6 +11,13 @@
                         "link": "/jenkins/"
                     },
                     {
+                        "id": "gitlab",
+                        "title": "gitlab",
+                        "img": "img/gitlab.jpg",
+                        "description": "Git Repository Management CI/CD tool",
+                        "link": "/gitlab/"
+                    },
+                    {
                         "id": "gerrit",
                         "title": "gerrit",
                         "img": "img/gerrit.jpg",
